@@ -1,7 +1,7 @@
 # my-resume
 
 > My resume built with Vue.js
-> Click [here | https://aztalbot.github.io/Resume/#/] to see it live.
+> Click [here](https://aztalbot.github.io/Resume/#/) to see it live.
 
 ## Build Setup
 
