@@ -16,8 +16,8 @@
         </div>
       </div>
       <div class="experience-body" v-for="description in exp.descriptionArr">
-        <span class="bullet">» </span>
-        <span>{{ description }}</span>.
+        <div class="bullet">» </div>
+        <div class="exp-content">{{ description }}.</div>
       </div>
     </div>
   </div>
@@ -52,8 +52,17 @@ h2 {
   align-self: flex-end;
   text-transform: uppercase
 }
+.experience-body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding-right: 150px;
+  margin-bottom: 4px
+}
 .bullet {
-  font-size: 16pt
+  font-size: 16pt;
+  margin-right: 10px;
+  line-height: .9
 }
 .experience-section {
   text-align: left

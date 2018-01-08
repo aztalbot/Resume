@@ -1,16 +1,17 @@
 <template>
-  <div :class="this.class">
-    <profile-pic v-if="!print"/>
-    <resume-header :title="nameHeader"/>
-    <contact :info="profile"/>
-    <exec-summary :text="summary"/>
-    <hr/>
-    <experience :experiences="experienceArr"/>
-    <hr/>
-    <skills :skills="skills"/>
-    <hr/>
-    <education :schooling="schools"/>
-  </div>
+  <transition name="rise" :duration="10000" appear>
+    <div :class="this.class">
+      <resume-header :title="nameHeader"/>
+      <contact :info="profile"/>
+      <exec-summary :text="summary"/>
+      <hr/>
+      <experience :experiences="experienceArr"/>
+      <hr/>
+      <skills :skills="skills"/>
+      <hr/>
+      <education :schooling="schools"/>
+    </div>
+  </transition>
 </template>
 
 <script>
@@ -75,9 +76,18 @@ export default {
 </script>
 
 <style scoped>
+  .rise-enter {
+    transform: translateY(150%);
+    -webkit-transform: translateY(150%);
+  }
+  .rise-enter-to {
+    transform: translateY(0%);
+    -webkit-transform: translateY(0%);
+  }
   .resume {
+    background-color: white;
     margin: 0 auto;
-    margin-bottom: 35px;
+    margin-bottom: 50px;
     margin-top: 50px;
     padding-left: 50px;
     padding-right: 50px;
@@ -92,6 +102,7 @@ export default {
   .resume:hover {
     box-shadow: grey 0px 1px 50px 1px;
     transform: scale(1.005);
+    -webkit-transform: scale(1.005);
     border-radius: 7px
   }
   .resume.print {
@@ -102,9 +113,6 @@ export default {
   .resume.print:hover {
     box-shadow: none;
     transform: none
-  }
-  .resume.print profile-pic {
-    display: none
   }
   hr {
     margin-top: 20px
