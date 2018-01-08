@@ -1,6 +1,9 @@
-# my-resume
+# Vue.js Resume
 
 > My resume built with Vue.js
+
+# Demo
+Click [here](https://aztalbot.github.io/Resume/#/) to see it live.
 
 ## Build Setup
 
