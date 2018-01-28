@@ -3,9 +3,9 @@
     <h2>
       WHAT I KNOW.
     </h2>
-    <div class="skillset" v-for="skillset in skills">
+    <div class="skillset" v-for="skillset in skills" :key="skillset.id">
       <strong>{{ skillset.name }}:</strong>
-      <span v-for="(skill, i) in skillset.items">
+      <span v-for="(skill, i) in skillset.items" :key="skill.id">
         <span>{{ skill }}</span><span v-if="i != skillset.items.length - 1">, </span>
       </span>
     </div>

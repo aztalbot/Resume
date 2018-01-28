@@ -3,7 +3,7 @@
     <h2>
       WHAT I'VE DONE.
     </h2>
-    <div class="exp-container" v-for="exp in experiences">
+    <div class="exp-container" v-for="exp in experiences" :key="exp.id">
       <div class="exp-flex">
         <div class="experience-header">
           <span class="position">{{ exp.position.title }}</span>
@@ -15,7 +15,7 @@
           <strong>{{ exp.timeFrame.start }} – {{ exp.timeFrame.end }}</strong>
         </div>
       </div>
-      <div class="experience-body" v-for="description in exp.descriptionArr">
+      <div class="experience-body" v-for="description in exp.descriptionArr" :key="description.id">
         <div class="bullet">» </div>
         <div class="exp-content">{{ description }}.</div>
       </div>

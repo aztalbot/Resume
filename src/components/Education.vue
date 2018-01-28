@@ -3,7 +3,7 @@
     <h2>
       WHERE I'VE LEARNED.
     </h2>
-    <div class="edu-container" v-for="school in schooling">
+    <div class="edu-container" v-for="school in schooling" :key="school.id">
       <div class="edu-flex">
         <div class="education-header">
           <strong class="school" v-if="!school.isAbroad">{{ school.name }}</strong>
