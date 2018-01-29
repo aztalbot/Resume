@@ -105,7 +105,7 @@ class TimeFrame {
 
 class PositionDate {
   constructor (month, year) {
-    this.month = month
+    this.month = month - 1
     this.year = year
   }
   get date () {
