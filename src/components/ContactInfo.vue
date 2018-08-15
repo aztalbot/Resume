@@ -1,7 +1,7 @@
 <template>
   <div class="contact-info">
     <h3>
-      {{ info.address.fullAddress }} •
+      {{ info.address.location.fullLocation }} •
       {{ info.contact.phone }} •
       {{ info.contact.email }}
     </h3>
