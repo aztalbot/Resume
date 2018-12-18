@@ -1,9 +1,35 @@
 // Build resume using classes from resumeClasses
-import { Profile, Name, Address, Contact, Experience, Position, Location, Employer, TimeFrame, PositionDate } from './resumeClasses'
+import {
+  Profile,
+  Name,
+  Address,
+  Contact,
+  Experience,
+  Position,
+  Location,
+  Employer,
+  TimeFrame,
+  PositionDate
+} from './resumeClasses'
 
 const RESUME_DATA = {}
 
 RESUME_DATA.experienceArr = [
+  new Experience(
+    new Position(
+      'Information Security Software Engineer',
+      new Employer('Thomson Reuters', 'http://www.thomsonreuters.com'),
+      new Location('Richmond', 'VA')
+    ),
+    false,
+    new TimeFrame(
+      new PositionDate(12, 2018),
+      'Present'
+    ),
+    [
+      'Develop software for teams in the Information Security department'
+    ]
+  ),
   new Experience(
     new Position(
       'Developer Intern - Security Software Engineering',
@@ -13,7 +39,7 @@ RESUME_DATA.experienceArr = [
     false,
     new TimeFrame(
       new PositionDate(6, 2018),
-      'Present'
+      new PositionDate(12, 2018)
     ),
     [
       'Build a full-stack cloud security metrics application using a serverless architecture, Go, Vue, and TypeScript',
@@ -105,8 +131,7 @@ RESUME_DATA.experienceArr = [
   )
 ]
 
-RESUME_DATA.skills = [
-  {
+RESUME_DATA.skills = [{
     name: 'Platforms & Frameworks',
     items: ['Vue', 'Node.js', 'Serverless', 'Jenkins', 'Git', 'ArcGIS']
   },
@@ -120,8 +145,7 @@ RESUME_DATA.skills = [
   }
 ]
 
-RESUME_DATA.education = [
-  {
+RESUME_DATA.education = [{
     name: 'Virginia Commonwealth University',
     location: new Location('Richmond', 'VA'),
     degree: 'Post-baccalaureate Certificate',
@@ -170,10 +194,11 @@ RESUME_DATA.profile = new Profile(
 )
 
 RESUME_DATA.summary = `
-  I am an aspiring full-stack developer, pursuing a post-baccalaureate certificate in Computer Science at VCU. I
-  currently work at Thomson Reuters on a team building applications to support the cyber security department. I
-  am also part of the instructional staff at the University of Richmond Coding Bootcamp where I help students
-  learn to build full-stack web applications using JavaScript.
+  I am an aspiring full-stack developer currently working at Thomson Reuters 
+  on a team building applications to support the cyber security department.
+  I actively try to learn new technologies, and I enjoy helping others learn.
+  Mainly, I build front-ends in Vue.js and write server-side code in Go, but
+  I am also experienced in Node.js and Python.
 `
 
 export default RESUME_DATA
